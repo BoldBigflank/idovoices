@@ -1,0 +1,18 @@
+Instructions:
+
+Setup:
+
+In Google App Engine dashboard: Register an application
+Download this repo: git clone git://github.com/smashcubed/idovoices.git
+in app.yaml: change "application: idovoices" to your own application name
+In Twilio's dashboard: point a number to http://<yourapplicationname>.appengine.com/sms
+You're ready to play!
+
+
+Play:
+Send "play" to the number you assigned (we'll call it HOST).  You will receive a name to impersonate.
+Without saying the name of the person, get others to text the name to HOST. (They can misspell a little)
+When someone is correct, they get 10 points, you get 20 points and a new name to impersonate.
+Everyone gets a name at the same time.
+First to 200 points wins!
+If you accidentally say your name or don't know who that is, text "pass" for a new name.
