@@ -20,6 +20,7 @@ import re
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp import util
 from google.appengine.ext import db
+from words import getWords
 import twilio
 import User  
 import Word
@@ -163,25 +164,10 @@ def sendText(message, self):
     r.addSms(message)
     self.response.out.write(r)
     
-words = ["Doug",
-"The Red M",
-"Arnold Schwarzenegger",
-"Barack Obama",
-"Richard Simmons",
-"Glenn Beck",
-"Bart Simpson",
-"Scooby Doo",
-"Bender",
-"Lady Gaga",
-"John Wayne",
-"Stewie Griffin",
-"Tom Brady",
-"Chucky",
-"George Clooney",
-"Nikole Kidman"]
+
 
 def importWords():
-    for word in words:
+    for word in getWords():
         dbWord = Word.Word()
         dbWord.name = word
         dbWord.put()

@@ -5,6 +5,8 @@ Setup:
 In Google App Engine dashboard: Register an application
 Download this repo: git clone git://github.com/smashcubed/idovoices.git
 in app.yaml: change "application: idovoices" to your own application name
+Deploy the application
+
 In Twilio's dashboard: point a number to http://<yourapplicationname>.appengine.com/sms
 You're ready to play!
 
